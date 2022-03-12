@@ -69,7 +69,22 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+
+    <script defer src="/js/plugins/swiper.min.js"></script>
+    <script defer src="/js/plugins/mapbox.min.js"></script>
+    <script defer src="/js/main.js"></script>
+
+    <link rel="stylesheet" href="/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/plugins/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="/css/plugins/fancybox.min.css" />
+    <link rel="stylesheet" href="/css/plugins/datepicker.css" />
+    <link rel="stylesheet" href="/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="/css/plugins/mapbox-style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    </Helmet>
   )
 }
 

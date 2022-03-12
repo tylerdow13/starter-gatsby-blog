@@ -4,7 +4,10 @@ import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import Hero from '../components/hero'
+import TstBanner from '../components/tstBanner'
 import ArticlePreview from '../components/article-preview'
+
+
 
 class RootIndex extends React.Component {
   render() {
@@ -13,6 +16,11 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+        <TstBanner
+          image={author.heroImage.gatsbyImageData}
+          title={author.name}
+          content={author.shortBio.shortBio}
+        />
         <Hero
           image={author.heroImage.gatsbyImageData}
           title={author.name}
