@@ -4,13 +4,13 @@ import * as styles from './tags.module.css'
 
 const Tags = ({ tags }) =>
   tags?.length > 0 && (
-    <small className={styles.tags}>
+    <div className="tst-card-badge tst-auxiliary-color-1">
       {tags.map((tag) => (
-        <div key={tag} className={styles.tag}>
+        <div key={tag}>
           {tag}
         </div>
       ))}
-    </small>
+    </div>
   )
 
 export default Tags

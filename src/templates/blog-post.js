@@ -26,42 +26,78 @@ class BlogPostTemplate extends React.Component {
           title={post.title}
           content={post.description?.childMarkdownRemark?.excerpt}
         />
-        <div className={styles.container}>
-          <span className={styles.meta}>
-            {post.author?.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {post.body?.childMarkdownRemark?.timeToRead} minute read
-          </span>
-          <div className={styles.article}>
-            <div
-              className={styles.body}
-              dangerouslySetInnerHTML={{
-                __html: post.body?.childMarkdownRemark?.html,
-              }}
-            />
-            <Tags tags={post.tags} />
-            {(previous || next) && (
-              <nav>
-                <ul className={styles.articleNavigation}>
-                  {previous && (
-                    <li>
-                      <Link to={`/blog/${previous.slug}`} rel="prev">
-                        ← {previous.title}
-                      </Link>
-                    </li>
-                  )}
-                  {next && (
-                    <li>
-                      <Link to={`/blog/${next.slug}`} rel="next">
-                        {next.title} →
-                      </Link>
-                    </li>
-                  )}
-                </ul>
-              </nav>
-            )}
+        <div id="tst-dynamic-content" class="tst-dynamic-content">
+
+          <div class="tst-content-frame">
+            <div class="tst-content-box">
+
+              <div class="container">
+                <a href="#tst-dynamic-content" class="tst-scroll-hint-frame tst-anchor-scroll">
+                  <div class="tst-scroll-hint"></div>
+                </a>
+              </div>
+
+              <div class="container tst-p-60-60">
+
+                <div class="row justify-content-center">
+
+                  <div class="col-lg-8">
+
+                    <div class="tst-post-bottom tst-mb-30">
+                      <div class="tst-post-author">
+                        <img src="img/faces/2.jpg" alt="author" />
+                        <h6>
+                        <span className={styles.meta}>
+                          {post.author?.name} &middot;{' '}
+                        </span>
+                        </h6>
+                      </div>
+                      <div class="tst-date">02.02.21</div>
+                    </div>
+
+                    <div
+                      className={styles.body}
+                      dangerouslySetInnerHTML={{
+                        __html: post.body?.childMarkdownRemark?.html,
+                      }}
+                    />
+
+                    <div class="tst-spacer"></div>
+
+                    <Tags tags={post.tags} />
+                    {(previous || next) && (
+                      <nav>
+                        <ul className={styles.articleNavigation}>
+                          {previous && (
+                            <li>
+                              <Link to={`/blog/${previous.slug}`} rel="prev">
+                                ← {previous.title}
+                              </Link>
+                            </li>
+                          )}
+                          {next && (
+                            <li>
+                              <Link to={`/blog/${next.slug}`} rel="next">
+                                {next.title} →
+                              </Link>
+                            </li>
+                          )}
+                        </ul>
+                      </nav>
+                    )}
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </Layout>
     )
   }

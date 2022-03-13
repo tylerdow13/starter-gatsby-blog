@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve('./src/templates/blog-post.js')
+  const waterAccess = path.resolve('./src/templates/water-access.js')
 
   const result = await graphql(
     `
@@ -12,6 +13,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allContentfulBlogPost {
           nodes {
             title
+            slug
+          }
+        }
+        allContentfulWaterAccess {
+          nodes {
+            name
             slug
           }
         }
@@ -28,6 +35,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allContentfulBlogPost.nodes
+  const waters = result.data.allContentfulWaterAccess.nodes
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
@@ -46,6 +54,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           slug: post.slug,
           previousPostSlug,
           nextPostSlug,
+        },
+      })
+    })
+  }
+  if (waters.length > 0) {
+    waters.forEach((water, index) => {
+      createPage({
+        path: `/water-access/${water.slug}/`,
+        component: waterAccess,
+        context: {
+          slug: water.slug,
         },
       })
     })

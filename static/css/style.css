@@ -4458,3 +4458,8 @@ mapbox
     display: none; } }
 
 /*# sourceMappingURL=style.css.map */
+
+.tst-blog-card .tst-cover-frame {padding-bottom:0px;}
+.sc-water-access-container {
+    margin-top: 125px;
+}

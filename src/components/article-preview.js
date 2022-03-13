@@ -4,7 +4,6 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Container from './container'
 import Tags from './tags'
-import * as styles from './article-preview.module.css'
 
 const ArticlePreview = ({ posts }) => {
   if (!posts) return null
@@ -12,27 +11,36 @@ const ArticlePreview = ({ posts }) => {
 
   return (
     <Container>
-      <ul className={styles.articleList}>
+
         {posts.map((post) => {
           return (
-            <li key={post.slug}>
-              <Link to={`/blog/${post.slug}`} className={styles.link}>
-                <GatsbyImage alt="" image={post.heroImage.gatsbyImageData} />
-                <h2 className={styles.title}>{post.title}</h2>
-              </Link>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: post.description.childMarkdownRemark.html,
-                }}
-              />
-              <div className={styles.meta}>
-                <small className="meta">{post.publishDate}</small>
-                <Tags tags={post.tags} />
+            <div class="col-lg-4">
+              <div class="tst-blog-card tst-mb-60">
+                <Link to={`/blog/${post.slug}`} className="tst-cover-frame tst-anima-link">
+                  <GatsbyImage alt="" image={post.heroImage.gatsbyImageData} />
+                  <Tags tags={post.tags} />
+                </Link>
+                <div class="tst-descr">
+
+                <h5 class="tst-mb-15"><Link to={`/blog/${post.slug}`} className="tst-anima-link">{post.title}</Link></h5>
+                  <div class="tst-text"
+                    dangerouslySetInnerHTML={{
+                      __html: post.description.childMarkdownRemark.html,
+                    }}
+                  />
+                  <div class="tst-spacer-sm"></div>
+                  <div class="tst-post-bottom">
+                    <div class="tst-post-author">
+                      <img src="img/faces/2.jpg" alt="author" />
+                      <h6>Viktoria Freeman</h6>
+                    </div>
+                    <div class="tst-date">{post.publishDate}</div>
+                  </div>
+                </div>
               </div>
-            </li>
+            </div>
           )
         })}
-      </ul>
     </Container>
   )
 }

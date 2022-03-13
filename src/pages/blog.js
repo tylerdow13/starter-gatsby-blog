@@ -13,9 +13,35 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Seo title="Blog" />
-        <Hero title="Blog" />
-        <ArticlePreview posts={posts} />
+        <Seo title="Recent Articles" />
+        <Hero title="Recent Articles" />
+        <div id="tst-dynamic-content" class="tst-dynamic-content">
+          <div class="tst-content-frame">
+            <div class="tst-content-box">
+
+              <div class="container">
+                <a href="#tst-dynamic-content" class="tst-scroll-hint-frame tst-anchor-scroll">
+                  <div class="tst-scroll-hint"></div>
+                </a>
+              </div>
+
+              <div class="container tst-p-60-60">
+
+                <div class="row">
+
+                  <div class="col-lg-12">
+                    <div class="text-center">
+                      <div class="tst-suptitle tst-suptitle-center tst-mb-15">Newsletter</div>
+                      <h3 class="tst-mb-30">Latest publications</h3>
+                      <p class="tst-text tst-mb-60">Porro eveniet, autem ipsam corrupti consectetur cum. <br />Repudiandae dignissimos fugiat sit nam.</p>
+                    </div>
+                  </div>
+                  <ArticlePreview posts={posts} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </Layout>
     )
   }
