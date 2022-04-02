@@ -20,7 +20,7 @@ $(function() {
   /*-------------------------
   preload
   -------------------------*/
-  
+
 
   /*-------------------------
   mobile menu
@@ -238,14 +238,14 @@ $(function() {
     mapboxgl.accessToken = 'pk.eyJ1Ijoic3Rvc2NhciIsImEiOiJja2VpbDE4b2UwbDg3MnNwY2d3YzlvcDV5In0.e26tLedpKwxrkOmPkWhQlg';
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/stoscar/ckggs77460wxw19ob8q5wldwf',
-      center: [-79.394900, 43.643102],
-      zoom: 13
+      style: 'mapbox://styles/mapbox/satellite-streets-v11',
+      center: [accessLon,accessLat],
+      zoom: 15
 
     });
 
     var marker = new mapboxgl.Marker()
-      .setLngLat([-79.394900, 43.643102])
+      .setLngLat([accessLon,accessLat])
       .addTo(map);
   }
   $('.tst-lock').on('click', function() {

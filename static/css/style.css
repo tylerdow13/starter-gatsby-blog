@@ -221,7 +221,7 @@ scrollbar
 
 /* line 21, ../scss/_common.scss */
 ::-webkit-scrollbar-thumb {
-  background: #f39c12;
+  background: #e55f09;
   border-radius: 2px; }
 
 /* line 26, ../scss/_common.scss */
@@ -243,9 +243,9 @@ body {
   font-size: 18px;
   font-weight: 300;
   font-family: "Josefin Sans", sans-serif;
-  background-image: url("../img/bg.jpg");
-  background-size: 100%;
-  background-attachment: fixed; }
+  background-image: url("../img/bg-1.png");
+  background-size: 50%;
+  background-repeat: repeat;}
   /* line 47, ../scss/_common.scss */
   body .tst-main-overlay {
     position: fixed;
@@ -269,7 +269,7 @@ a:hover {
   /* line 68, ../scss/_common.scss */
   a.tst-color:hover,
   a:hover.tst-color:hover {
-    color: #f39c12; }
+    color: #e55f09; }
 
 /* line 74, ../scss/_common.scss */
 .h1,
@@ -359,7 +359,7 @@ h6 {
   /* line 158, ../scss/_common.scss */
   .tst-icon-link:hover {
     opacity: 1;
-    color: #f39c12; }
+    color: #e55f09; }
 
 /* line 164, ../scss/_common.scss */
 .tst-suptitle {
@@ -380,7 +380,7 @@ h6 {
     position: absolute;
     left: 0;
     top: 4px;
-    background-color: #f39c12; }
+    background-color: #e55f09; }
   /* line 185, ../scss/_common.scss */
   .tst-suptitle.tst-suptitle-center {
     text-align: center;
@@ -454,7 +454,7 @@ a.tst-white-2 {
 
 /* line 265, ../scss/_common.scss */
 .tst-color {
-  color: #f39c12; }
+  color: #e55f09; }
 
 /* line 269, ../scss/_common.scss */
 .tst-right {
@@ -572,7 +572,7 @@ buttons
 .tst-btn {
   position: relative;
   padding: 0 30px;
-  background-color: #f39c12;
+  background-color: #e55f09;
   display: inline-block;
   height: 50px;
   line-height: 54px;
@@ -796,7 +796,7 @@ preloader
     /* line 26, ../scss/_frame.scss */
     .tst-preloader-frame .tst-preloader span {
       position: absolute;
-      border: 6px solid #f39c12;
+      border: 6px solid #e55f09;
       border-top: 6px solid transparent;
       border-radius: 999px; }
       /* line 32, ../scss/_frame.scss */
@@ -992,7 +992,7 @@ menu
         /* line 196, ../scss/_frame.scss */
         .tst-menu-frame .tst-menu nav ul li.current-menu-item:after {
           content: '';
-          background-color: #f39c12;
+          background-color: #e55f09;
           position: absolute;
           bottom: 0;
           height: 4px;
@@ -1014,7 +1014,7 @@ menu
           top: 90px;
           left: 0;
           border-radius: 5px;
-          background-color: #f39c12;
+          background-color: #e55f09;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
               -ms-flex-direction: column;
@@ -1273,7 +1273,7 @@ menu
               display: none; }
             /* line 489, ../scss/_frame.scss */
             .tst-menu-frame .tst-menu nav ul li.current-menu-item > a {
-              color: #f39c12; }
+              color: #e55f09; }
             /* line 494, ../scss/_frame.scss */
             .tst-menu-frame .tst-menu nav ul li ul {
               opacity: 1;
@@ -1508,7 +1508,7 @@ banner
       transition: 0.3s ease-in-out; }
       /* line 85, ../scss/_content.scss */
       .tst-banner .tst-cover-frame .tst-lock.tst-active {
-        background-color: #f39c12; }
+        background-color: #e55f09; }
     /* line 90, ../scss/_content.scss */
     .tst-banner .tst-cover-frame .tst-overlay-2 {
       position: absolute;
@@ -1677,7 +1677,7 @@ call to action
       transition: 0.3s ease-in-out; }
       /* line 274, ../scss/_content.scss */
       .tst-call-to-action .tst-cover-frame .tst-lock.tst-active {
-        background-color: #f39c12; }
+        background-color: #e55f09; }
   /* line 280, ../scss/_content.scss */
   .tst-call-to-action .tst-cta-frame {
     width: 100%;
@@ -1753,7 +1753,7 @@ about
     width: 70px;
     margin-left: -35px;
     margin-top: -35px;
-    background-color: #f39c12;
+    background-color: #e55f09;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2044,7 +2044,7 @@ testimonials
   /* line 614, ../scss/_content.scss */
   .tst-testimonial-card .tst-quote {
     width: 100px;
-    color: #f39c12;
+    color: #e55f09;
     line-height: 100px;
     position: absolute;
     top: -90px;
@@ -2159,7 +2159,7 @@ blog
     .tst-blog-card .tst-cover-frame .tst-card-badge {
       padding: 5px 10px 3px;
       border-radius: 3px;
-      background-color: #f39c12;
+      background-color: #e55f09;
       position: absolute;
       font-weight: 800;
       top: 30px;
@@ -2607,7 +2607,7 @@ breadcrumbs
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  background-color: #f39c12;
+  background-color: #e55f09;
   padding: 0;
   margin: 0;
   padding: 0 30px;
@@ -2681,7 +2681,7 @@ timeline
     margin-left: -2px;
     height: 100%;
     width: 4px;
-    background-color: #f39c12; }
+    background-color: #e55f09; }
   /* line 1234, ../scss/_content.scss */
   .tst-timeline .tst-timeline-item {
     width: 50%;
@@ -2741,7 +2741,7 @@ timeline
         height: 4px;
         width: 50px;
         border-radius: 3px;
-        background-color: #f39c12; }
+        background-color: #e55f09; }
       /* line 1287, ../scss/_content.scss */
       .tst-timeline .tst-timeline-item .tst-year:after {
         content: '';
@@ -2754,7 +2754,7 @@ timeline
         border-radius: 50%;
         -webkit-box-shadow: 0 0 0 4px #fcfcfc;
                 box-shadow: 0 0 0 4px #fcfcfc;
-        border: solid 4px #f39c12;
+        border: solid 4px #e55f09;
         background-color: #fcfcfc; }
     /* line 1302, ../scss/_content.scss */
     .tst-timeline .tst-timeline-item:nth-child(2n) {
@@ -2876,7 +2876,7 @@ new menu
       left: 50%;
       margin-top: -20px;
       margin-left: -20px;
-      background-color: #f39c12;
+      background-color: #e55f09;
       height: 40px;
       width: 40px;
       display: -webkit-box;
@@ -2927,7 +2927,7 @@ new menu
       /* line 1474, ../scss/_content.scss */
       .tst-new-menu-card .tst-menu-item-descr .tst-name-price .tst-price {
         line-height: 20px;
-        background-color: #f39c12;
+        background-color: #e55f09;
         padding: 7px 10px 0;
         border-radius: 3px;
         font-weight: 600;
@@ -3234,7 +3234,7 @@ default card
             transform: scale(1) !important;
     border: none !important;
     color: #1a2f33;
-    background-color: #f39c12; }
+    background-color: #e55f09; }
 
 /* line 194, ../scss/_menu.scss */
 .swiper-menu {
@@ -3430,7 +3430,7 @@ minicart
     .tst-minicart-window .woocommerce-mini-cart__buttons a {
       position: relative;
       padding: 0 30px;
-      background-color: #f39c12;
+      background-color: #e55f09;
       display: inline-block;
       height: 50px;
       line-height: 54px;
@@ -3802,7 +3802,7 @@ sidebar
   .woocommerce-product-search button {
     position: relative;
     padding: 0 20px;
-    background-color: #f39c12;
+    background-color: #e55f09;
     display: inline-block;
     height: 50px;
     line-height: 54px;
@@ -3835,7 +3835,7 @@ cart
 .woocommerce button {
   position: relative;
   padding: 0 30px !important;
-  background-color: #f39c12 !important;
+  background-color: #e55f09 !important;
   display: inline-block;
   height: 50px !important;
   line-height: 54px !important;
@@ -4059,7 +4059,7 @@ table {
 .checkout-button {
   position: relative;
   padding: 0 30px !important;
-  background-color: #f39c12 !important;
+  background-color: #e55f09 !important;
   display: inline-block;
   height: 50px !important;
   line-height: 54px !important;
@@ -4141,7 +4141,7 @@ swiper
             transform: scale(1.6);
     opacity: 1;
     margin: 0 5px;
-    border: solid 3px #f39c12; }
+    border: solid 3px #e55f09; }
   /* line 34, ../scss/_custom.scss */
   .swiper-pagination-bullet:focus {
     outline: inherit; }
@@ -4170,7 +4170,7 @@ swiper
     .tst-slider-navigation .tst-nav .tst-slider-btn {
       padding-top: 1px;
       margin-left: 15px;
-      background-color: #f39c12;
+      background-color: #e55f09;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -4277,7 +4277,7 @@ swiper
   .tst-main-pagination .swiper-pagination-bullet {
     height: 10px;
     width: 10px;
-    border: solid 3px #f39c12;
+    border: solid 3px #e55f09;
     margin: 0 20px 0 0;
     border: none;
     opacity: 1;
@@ -4291,7 +4291,7 @@ swiper
       -webkit-transform: scale(1.5);
               transform: scale(1.5);
       margin: 0 20px 0 0;
-      border: solid 2px #f39c12; }
+      border: solid 2px #e55f09; }
     /* line 158, ../scss/_custom.scss */
     .tst-main-pagination .swiper-pagination-bullet:focus {
       outline: inherit; }
@@ -4363,11 +4363,11 @@ datepicker
     color: #1a2f33; }
   /* line 224, ../scss/_custom.scss */
   .datepicker .datepicker--cell.-selected-, .datepicker .datepicker--cell.-selected-.-current- {
-    background: #f39c12;
+    background: #e55f09;
     color: #fff; }
     /* line 229, ../scss/_custom.scss */
     .datepicker .datepicker--cell.-selected-:hover, .datepicker .datepicker--cell.-selected-.-current-:hover {
-      background: #f39c12; }
+      background: #e55f09; }
 
 /* line 235, ../scss/_custom.scss */
 .datepicker--pointer {
@@ -4419,11 +4419,10 @@ mapbox
 --------------------------*/
 /* line 283, ../scss/_custom.scss */
 .mapboxgl-marker svg {
-  -webkit-animation: marker 1s infinite ease-in-out;
-          animation: marker 1s infinite ease-in-out; }
+   }
   /* line 286, ../scss/_custom.scss */
   .mapboxgl-marker svg g {
-    fill: #f39c12; }
+    fill: #e55f09; }
   /* line 290, ../scss/_custom.scss */
   .mapboxgl-marker svg circle {
     fill: #28292c; }
@@ -4462,4 +4461,44 @@ mapbox
 .tst-blog-card .tst-cover-frame {padding-bottom:0px;}
 .sc-water-access-container {
     margin-top: 125px;
+}
+.sc-water-access-banner {
+    height: 300px;
+}
+a.tst-scroll-hint-frame.sc-quicklinks {
+  height: 55px;
+  width: 55px;
+  top:-35px;
+}
+a.tst-scroll-hint-frame.sc-quicklinks::after {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  content: 'Directions';
+  border-radius: 0;
+  top: 57px;
+  background-color: transparent;
+  font-size: 14px;
+  text-align: center;
+  width: 65px;
+}
+a.tst-scroll-hint-frame.quick-link-share {
+    left: calc(80%);
+}
+a.tst-scroll-hint-frame.quick-link-second {
+    left: calc(60%);
+}
+.sc-water-access-quicklink-bg {
+    height: 50px;
+    background: #e55f09;
+    border-radius: 5px 5px 0 0;
+}
+a.tst-btn.tst-res-btn {
+    color: #fff;
+}
+
+@media (max-width: 790px) {
+  .sc-water-access-banner {
+      height: 150px;
+  }
 }

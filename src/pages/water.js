@@ -29,6 +29,7 @@ export const pageQuery = graphql`
       nodes {
         name
         slug
+        state
         createdAt
       }
     }

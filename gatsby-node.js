@@ -6,6 +6,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const blogPost = path.resolve('./src/templates/blog-post.js')
   const waterAccess = path.resolve('./src/templates/water-access.js')
+  const waterSystem = path.resolve('./src/templates/water-system.js')
+  const states = path.resolve('./src/templates/states.js')
 
   const result = await graphql(
     `
@@ -17,6 +19,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
         allContentfulWaterAccess {
+          nodes {
+            slug
+            state
+            name
+          }
+        }
+        allContentfulWaterSystem {
+          nodes {
+            systemName
+            slug
+            stateLoad
+          }
+        }
+        allContentfulStates {
           nodes {
             name
             slug
@@ -35,7 +51,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allContentfulBlogPost.nodes
-  const waters = result.data.allContentfulWaterAccess.nodes
+  const wateraccess = result.data.allContentfulWaterAccess.nodes
+  const waters = result.data.allContentfulWaterSystem.nodes
+  const thestates = result.data.allContentfulStates.nodes
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
@@ -58,13 +76,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+  if (wateraccess.length > 0) {
+    wateraccess.forEach((wateracc, index) => {
+      createPage({
+        path: `/fishing/${wateracc.state}/access/${wateracc.slug}/`,
+        component: waterAccess,
+        context: {
+          slug: wateracc.slug,
+        },
+      })
+    })
+  }
   if (waters.length > 0) {
     waters.forEach((water, index) => {
       createPage({
-        path: `/water-access/${water.slug}/`,
-        component: waterAccess,
+        path: `/fishing/${water.stateLoad}/${water.slug}`,
+        component: waterSystem,
         context: {
           slug: water.slug,
+        },
+      })
+    })
+  }
+  if (thestates.length > 0) {
+    thestates.forEach((state, index) => {
+      createPage({
+        path: `/fishing/${state.slug}`,
+        component: states,
+        context: {
+          slug: state.slug,
         },
       })
     })

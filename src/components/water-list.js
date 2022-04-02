@@ -15,7 +15,7 @@ const WaterList = ({ posts }) => {
         {posts.map((post) => {
           return (
             <li key={post.slug}>
-              <Link to={`/water-access/${post.slug}`}>
+              <Link to={`/fishing/${post.state}/access/${post.slug}/`}>
                 <h2>{post.name}</h2>
               </Link>
               <div>

@@ -4,6 +4,8 @@ import './variables.css'
 import Seo from './seo'
 import Navigation from './navigation'
 import Footer from './footer'
+import AccessTech from './access-single-tech'
+
 class Template extends React.Component {
   render() {
     const { children } = this.props
@@ -31,6 +33,7 @@ class Template extends React.Component {
               </div>
             </div>
               <main>{children}</main>
+
               <Footer />
         </div>
       </>

@@ -5,27 +5,23 @@ import get from 'lodash/get'
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import AccessHero from '../components/heroaccess'
-import AccessTypes from '../components/access-types'
-import AccessMap from '../components/mapaccess'
-import AccessTech from '../components/access-single-tech'
 
-class WaterAccessTemplate extends React.Component {
+class WaterSystemTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulWaterAccess')
+    const post = get(this.props, 'data.contentfulWaterSystem')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
 
     return (
       <Layout location={this.props.location}>
         <Seo
-          title={post.name}
+          title={post.systemName}
           description="yep"
-          lat={post.location.lat}
         />
 
-        <AccessMap
-          title={post.name}
-          state={post.state}
+        <AccessHero
+          image={post.mainImage?.gatsbyImageData}
+          title={post.systemName}
           content={post.description?.childMarkdownRemark?.excerpt}
         />
 
@@ -55,15 +51,12 @@ class WaterAccessTemplate extends React.Component {
 
                           <div class="tst-mb-30">
                             <div class="tst-label tst-mb-15">Data</div>
-                            <div class="h5">Name: {post.name}</div>
+                            <div class="h5">Name: {post.systemName}</div>
                             <div class="h5">id: {post.id}</div>
                             <div class="h5">slug: {post.slug}</div>
-                            <div class="h5">LatLong: {post.location.lat}, {post.location.lon}</div>
-
                             <div>
 
                             </div>
-                            <AccessTypes tags={post.accessType} />
 
                           </div>
 
@@ -79,7 +72,7 @@ class WaterAccessTemplate extends React.Component {
               <div
                 className="test"
                 dangerouslySetInnerHTML={{
-                  __html: post.accessNotes?.childMarkdownRemark?.html,
+                  __html: post.systemNotes?.childMarkdownRemark?.html,
                 }}
               />
             </div>
@@ -87,28 +80,23 @@ class WaterAccessTemplate extends React.Component {
         </div>
 
 
-        <AccessTech
-          lat={post.location.lat}
-          lon={post.location.lon}
-        />
       </Layout>
     )
   }
 }
 
-export default WaterAccessTemplate
+export default WaterSystemTemplate
 
 export const pageQuery = graphql`
-  query WaterAccessBySlug(
+  query WaterSystemBySlug(
     $slug: String!
   ){
-    contentfulWaterAccess(slug: { eq: $slug }) {
+    contentfulWaterSystem(slug: { eq: $slug }) {
       id
-      name
+      systemName
       slug
-      state
-      accessNotes {
-        accessNotes
+      systemNotes {
+        systemNotes
         childMarkdownRemark {
           html
           timeToRead
@@ -120,16 +108,6 @@ export const pageQuery = graphql`
         resize(height: 630, width: 1200) {
           src
         }
-      }
-      location {
-        lat
-        lon
-      }
-      accessType {
-        typeName
-      }
-      parentSystem {
-        systemName
       }
     }
   }
